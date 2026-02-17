@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKUAD Assignment Portal | Code 0910 6140</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>JKUAD</h1>
+                <span class="code">Code: 0910 6140</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#assignments">Assignments</a></li>
+                <li><a href="#submissions">Submissions</a></li>
+                <li><a href="#students">Students</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button class="login-btn" id="loginBtn">Login</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="JKUAD Assignment Portal">JKUAD Assignment Portal</h1>
+            <p class="subtitle">Your Gateway to Academic Excellence</p>
+            <p class="creator">Created by <span class="highlight">Jahnavi</span></p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="viewAssignments">View Assignments</button>
+                <button class="btn btn-secondary" id="submitWork">Submit Work</button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <h3 class="stat-number">15</h3>
+                <p>Active Students</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number">5</h3>
+                <p>Departments</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number">8</h3>
+                <p>Active Assignments</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assignments Section -->
+    <section id="assignments" class="section">
+        <div class="container">
+            <h2 class="section-title">Active Assignments</h2>
+            
+            <!-- Filter Options -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="CSE">CSE</button>
+                <button class="filter-btn" data-filter="ECE">ECE</button>
+                <button class="filter-btn" data-filter="ME">ME</button>
+                <button class="filter-btn" data-filter="IT">IT</button>
+            </div>
+
+            <div class="assignments-grid">
+                <!-- Assignment 1: Database Design -->
+                <div class="assignment-card" data-dept="CSE" data-id="1">
+                    <div class="card-header">
+                        <span class="dept-badge cse">CSE</span>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <h3>Database Design Project</h3>
+                    <p class="description">Create a complete database design for library management system</p>
+                    <div class="card-details">
+                        <div class="detail">
+                            <span class="icon">📚</span>
+                            <span>DBMS101 - Semester 5</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📊</span>
+                            <span>Max: 100 Marks</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📅</span>
+                            <span>Due: Feb 15, 2024</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">✅</span>
+                            <span class="submitted-count">7/15 Submitted</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openAssignmentDetails(1)">View Details</button>
+                </div>
+
+                <!-- Assignment 2: Sorting Algorithms -->
+                <div class="assignment-card" data-dept="CSE" data-id="2">
+                    <div class="card-header">
+                        <span class="dept-badge cse">CSE</span>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <h3>Sorting Algorithms Implementation</h3>
+                    <p class="description">Implement and compare QuickSort, MergeSort, and HeapSort algorithms</p>
+                    <div class="card-details">
+                        <div class="detail">
+                            <span class="icon">💻</span>
+                            <span>DSA201 - Semester 3</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📊</span>
+                            <span>Max: 50 Marks</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📅</span>
+                            <span>Due: Feb 20, 2024</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">✅</span>
+                            <span class="submitted-count">5/15 Submitted</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openAssignmentDetails(2)">View Details</button>
+                </div>
+
+                <!-- Assignment 3: Responsive Website -->
+                <div class="assignment-card" data-dept="CSE" data-id="3">
+                    <div class="card-header">
+                        <span class="dept-badge cse">CSE</span>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <h3>Responsive Website Development</h3>
+                    <p class="description">Create a responsive e-commerce website using HTML5, CSS3, JavaScript</p>
+                    <div class="card-details">
+                        <div class="detail">
+                            <span class="icon">🌐</span>
+                            <span>WEB301 - Semester 6</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📊</span>
+                            <span>Max: 75 Marks</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📅</span>
+                            <span>Due: Feb 25, 2024</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">✅</span>
+                            <span class="submitted-count">9/15 Submitted</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openAssignmentDetails(3)">View Details</button>
+                </div>
+
+                <!-- Assignment 4: Math Assignment -->
+                <div class="assignment-card" data-dept="CSE" data-id="4">
+                    <div class="card-header">
+                        <span class="dept-badge cse">CSE</span>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <h3>Calculus Problem Set</h3>
+                    <p class="description">Solve integration and differentiation problems - 20 questions</p>
+                    <div class="card-details">
+                        <div class="detail">
+                            <span class="icon">📐</span>
+                            <span>MATH101 - Semester 1</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📊</span>
+                            <span>Max: 60 Marks</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📅</span>
+                            <span>Due: Feb 18, 2024</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">✅</span>
+                            <span class="submitted-count">12/15 Submitted</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openAssignmentDetails(4)">View Details</button>
+                </div>
+
+                <!-- Assignment 5: Signals & Systems -->
+                <div class="assignment-card" data-dept="ECE" data-id="5">
+                    <div class="card-header">
+                        <span class="dept-badge ece">ECE</span>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <h3>Signal Processing Lab Report</h3>
+                    <p class="description">Analyze time and frequency domain signals with MATLAB simulations</p>
+                    <div class="card-details">
+                        <div class="detail">
+                            <span class="icon">📡</span>
+                            <span>SIGNALS - Semester 4</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📊</span>
+                            <span>Max: 80 Marks</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📅</span>
+                            <span>Due: Feb 22, 2024</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">✅</span>
+                            <span class="submitted-count">2/2 Submitted</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openAssignmentDetails(5)">View Details</button>
+                </div>
+
+                <!-- Assignment 6: ME Assignment -->
+                <div class="assignment-card" data-dept="ME" data-id="6">
+                    <div class="card-header">
+                        <span class="dept-badge me">ME</span>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <h3>Thermodynamics Case Study</h3>
+                    <p class="description">Analyze heat transfer in automotive engines with calculations</p>
+                    <div class="card-details">
+                        <div class="detail">
+                            <span class="icon">⚙️</span>
+                            <span>THERMO201 - Semester 4</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📊</span>
+                            <span>Max: 70 Marks</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📅</span>
+                            <span>Due: Feb 28, 2024</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">✅</span>
+                            <span class="submitted-count">2/2 Submitted</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openAssignmentDetails(6)">View Details</button>
+                </div>
+
+                <!-- Assignment 7: IT Project -->
+                <div class="assignment-card" data-dept="IT" data-id="7">
+                    <div class="card-header">
+                        <span class="dept-badge it">IT</span>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <h3>Cloud Computing Project</h3>
+                    <p class="description">Deploy a web application on AWS with auto-scaling setup</p>
+                    <div class="card-details">
+                        <div class="detail">
+                            <span class="icon">☁️</span>
+                            <span>CLOUD301 - Semester 6</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📊</span>
+                            <span>Max: 90 Marks</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📅</span>
+                            <span>Due: Mar 05, 2024</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">✅</span>
+                            <span class="submitted-count">1/2 Submitted</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openAssignmentDetails(7)">View Details</button>
+                </div>
+
+                <!-- Assignment 8: Programming Lab -->
+                <div class="assignment-card" data-dept="CSE" data-id="8">
+                    <div class="card-header">
+                        <span class="dept-badge cse">CSE</span>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <h3>Python Programming Lab</h3>
+                    <p class="description">Complete 10 programs on OOP concepts, file handling, exceptions</p>
+                    <div class="card-details">
+                        <div class="detail">
+                            <span class="icon">🐍</span>
+                            <span>PYTHON201 - Semester 3</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📊</span>
+                            <span>Max: 40 Marks</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">📅</span>
+                            <span>Due: Feb 16, 2024</span>
+                        </div>
+                        <div class="detail">
+                            <span class="icon">✅</span>
+                            <span class="submitted-count">10/15 Submitted</span>
+                        </div>
+                    </div>
+                    <button class="card-btn" onclick="openAssignmentDetails(8)">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Students Section -->
+    <section id="students" class="section">
+        <div class="container">
+            <h2 class="section-title">Registered Students</h2>
+            <div class="students-grid">
+                <div class="student-card" data-reg="351CSE001"><div class="student-avatar">J</div><h4>Jahn</h4><p>351CSE001</p><span class="dept-tag cse">CSE</span><div class="student-stats">Submitted: 4/5</div></div>
+                <div class="student-card" data-reg="352CSE002"><div class="student-avatar">D</div><h4>Dumku</h4><p>352CSE002</p><span class="dept-tag cse">CSE</span><div class="student-stats">Submitted: 3/5</div></div>
+                <div class="student-card" data-reg="353CSE003"><div class="student-avatar">K</div><h4>Kutty</h4><p>353CSE003</p><span class="dept-tag cse">CSE</span><div class="student-stats">Submitted: 5/5</div></div>
+                <div class="student-card" data-reg="354CSE004"><div class="student-avatar">A</div><h4>Appus</h4><p>354CSE004</p><span class="dept-tag cse">CSE</span><div class="student-stats">Submitted: 2/5</div></div>
+                <div class="student-card" data-reg="355CSE005"><div class="student-avatar">A</div><h4>Anju</h4><p>355CSE005</p><span class="dept-tag cse">CSE</span><div class="student-stats">Submitted: 4/5</div></div>
+                <div class="student-card" data-reg="356CSE006"><div class="student-avatar">J</div><h4>Jyo</h4><p>356CSE006</p><span class="dept-tag cse">CSE</span><div class="student-stats">Submitted: 5/5</div></div>
+                <div class="student-card" data-reg="357CSE007"><div class="student-avatar">A</div><h4>Adi</h4><p>357CSE007</p><span class="dept-tag cse">CSE</span><div class="student-stats">Submitted: 3/5</div></div>
+                <div class="student-card" data-reg="358ECE001"><div class="student-avatar">R</div><h4>Ravi</h4><p>358ECE001</p><span class="dept-tag ece">ECE</span><div class="student-stats">Submitted: 1/1</div></div>
+                <div class="student-card" data-reg="359ECE002"><div class="student-avatar">P</div><h4>Priya</h4><p>359ECE002</p><span class="dept-tag ece">ECE</span><div class="student-stats">Submitted: 1/1</div></div>
+                <div class="student-card" data-reg="360ME001"><div class="student-avatar">A</div><h4>Arjun</h4><p>360ME001</p><span class="dept-tag me">ME</span><div class="student-stats">Submitted: 1/1</div></div>
+                <div class="student-card" data-reg="361ME002"><div class="student-avatar">S</div><h4>Sneha</h4><p>361ME002</p><span class="dept-tag me">ME</span><div class="student-stats">Submitted: 1/1</div></div>
+                <div class="student-card" data-reg="362CE001"><div class="student-avatar">V</div><h4>Vikram</h4><p>362CE001</p><span class="dept-tag ce">CE</span><div class="student-stats">Submitted: 0/0</div></div>
+                <div class="student-card" data-reg="363IT001"><div class="student-avatar">K</div><h4>Kavya</h4><p>363IT001</p><span class="dept-tag it">IT</span><div class="student-stats">Submitted: 1/1</div></div>
+                <div class="student-card" data-reg="364IT002"><div class="student-avatar">R</div><h4>Rohit</h4><p>364IT002</p><span class="dept-tag it">IT</span><div class="student-stats">Submitted: 0/1</div></div>
+                <div class="student-card" data-reg="365CSE008"><div class="student-avatar">M</div><h4>Meera</h4><p>365CSE008</p><span class="dept-tag cse">CSE</span><div class="student-stats">Submitted: 4/5</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submissions Section -->
+    <section id="submissions" class="section">
+        <div class="container">
+            <h2 class="section-title">Recent Submissions</h2>
+            <div class="submissions-table">
+                <table id="submissionsTable">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Assignment</th>
+                            <th>Subject</th>
+                            <th>Status</th>
+                            <th>Marks</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jahn (351CSE001)</td>
+                            <td>Database Design Project</td>
+                            <td>DBMS101</td>
+                            <td><span class="status-pill graded">Graded</span></td>
+                            <td>95/100</td>
+                            <td>Feb 10, 2024</td>
+                            <td><button class="action-btn view-btn">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>Kutty (353CSE003)</td>
+                            <td>Responsive Website</td>
+                            <td>WEB301</td>
+                            <td><span class="status-pill graded">Graded</span></td>
+                            <td>68/75</td>
+                            <td>Feb 11, 2024</td>
+                            <td><button class="action-btn view-btn">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>Dumku (352CSE002)</td>
+                            <td>Sorting Algorithms</td>
+                            <td>DSA201</td>
+                            <td><span class="status-pill submitted">Submitted</span></td>
+                            <td>Pending</td>
+                            <td>Feb 12, 2024</td>
+                            <td><button class="action-btn grade-btn">Grade</button></td>
+                        </tr>
+                        <tr>
+                            <td>Jyo (356CSE006)</td>
+                            <td>Python Programming Lab</td>
+                            <td>PYTHON201</td>
+                            <td><span class="status-pill graded">Graded</span></td>
+                            <td>38/40</td>
+                            <td>Feb 13, 2024</td>
+                            <td><button class="action-btn view-btn">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>Anju (355CSE005)</td>
+                            <td>Calculus Problem Set</td>
+                            <td>MATH101</td>
+                            <td><span class="status-pill submitted">Submitted</span></td>
+                            <td>Pending</td>
+                            <td>Feb 14, 2024</td>
+                            <td><button class="action-btn grade-btn">Grade</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About JKUAD Portal</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to JKUAD Assignment System</h3>
+                    <p>The JKUAD Online Assignment Portal (Code: 0910 6140) is a comprehensive platform designed to streamline the assignment submission and grading process for students and faculty.</p>
+                    <h4>Features:</h4>
+                    <ul>
+                        <li>📝 Easy assignment submission</li>
+                        <li>📊 Real-time grade tracking</li>
+                        <li>🎯 Department-wise organization</li>
+                        <li>⏰ Deadline notifications</li>
+                        <li>💬 Feedback system</li>
+                        <li>📈 Progress analytics</li>
+                    </ul>
+                    <div class="creator-info">
+                        <h4>Creator</h4>
+                        <p>This portal was created by <strong class="highlight">Jahnavi</strong> as part of the DBMS project initiative to enhance the academic experience at JKUAD.</p>
+                    </div>
+                </div>
+                <div class="departments-list">
+                    <h4>Departments</h4>
+                    <div class="dept-item"><span class="dept-icon cse">CSE</span><span>Computer Science Engineering</span></div>
+                    <div class="dept-item"><span class="dept-icon ece">ECE</span><span>Electronics & Communication</span></div>
+                    <div class="dept-item"><span class="dept-icon me">ME</span><span>Mechanical Engineering</span></div>
+                    <div class="dept-item"><span class="dept-icon ce">CE</span><span>Civil Engineering</span></div>
+                    <div class="dept-item"><span class="dept-icon it">IT</span><span>Information Technology</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assignment Details Modal -->
+    <div id="assignmentModal" class="modal">
+        <div class="modal-content assignment-modal-content">
+            <span class="close" onclick="closeAssignmentModal()">&times;</span>
+            <div id="assignmentDetails">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to JKUAD Portal</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Registration Number / Faculty ID</label>
+                    <input type="text" id="username" placeholder="Enter your ID" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <div class="form-group">
+                    <label>Login As</label>
+                    <select id="userType">
+                        <option value="student">Student</option>
+                        <option value="faculty">Faculty</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JKUAD Portal</h3>
+                <p>Code: 0910 6140</p>
+                <p>Your Gateway to Academic Excellence</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#assignments">Assignments</a></li>
+                    <li><a href="#students">Students</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: portal@jkuad.edu</p>
+                <p>Support: support@jkuad.edu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; JKUAD Assignment Portal | Created by <strong>Jahnavi</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
